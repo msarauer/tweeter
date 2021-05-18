@@ -1,0 +1,26 @@
+.nav-bar {
+  background-color: #4056A1;
+  height: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-logo {
+  color:#FFFFFF;
+  font-family: "Bungee";
+  font-size: larger;
+  margin: 1.5em;
+}
+
+.new-tweet-btn {
+  display:flex;
+  margin:1.5em;
+  color:#FFFFFF;
+  flex-direction: column;
+  align-items: center;
+}
+
+.arrows {
+  color:red
+}
