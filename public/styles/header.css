@@ -1,0 +1,21 @@
+.head {
+  height: 400px;
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-flow: column wrap;
+  background-color: #e0b455;
+  background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
+}
+
+.head .name h2 span {
+  font-weight: 600;
+}
+
+.head .name h2 {
+  color: #ffffff;
+  margin: 0;
+  font-weight: 300;
+}

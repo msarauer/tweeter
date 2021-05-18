@@ -1,0 +1,32 @@
+.new-tweet {
+  width: 90%;
+  margin: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.send-tweet button {
+  background-color: #4056A1;
+  color:#FFFFFF;
+  border: none;
+}
+
+.send-tweet {
+  font-family: "Bungee";
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+textarea {
+  display: block;
+  width:100%;
+  border:none;
+  border-bottom: solid #545149;
+  background-color: #f4f1ec;
+  outline: none;
+  resize:none;
+  font-size: smaller;
+}
