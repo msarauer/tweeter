@@ -13,6 +13,11 @@
   border: none;
 }
 
+.send-tweet button:hover {
+  box-shadow: 5px 5px #7a776d;
+  color:#ecd79a
+}
+
 .send-tweet {
   font-family: "Bungee";
   display: flex;
