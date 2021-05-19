@@ -7,9 +7,14 @@
 $(document).ready(function() {
   //sets timeago up to display the date posted below tweets
   const x = document.getElementsByClassName('need_to_be_rendered');
-  // x[0].innerHTML = $.timeago(1461116232227);
 
-
+  $('form').on('submit', function(event){
+    event.preventDefault();
+    const data = $('form').serialize();
+    $.post('/tweets/', data, function() {
+      loadTweets();
+    });
+  })
   // Test / driver code (temporary)
 
   renderTweets(data);
@@ -54,6 +59,10 @@ const renderTweets = (tweetArr) => {
   for (const item of tweetArr) {
     $('#tweet-container').prepend(createTweetElement(item));
   }
+};
+
+const loadTweets = () => {
+  $.get('/tweets/', renderTweets);
 };
 
 const data = [
