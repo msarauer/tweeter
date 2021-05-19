@@ -10,10 +10,18 @@ $(document).ready(function() {
 
   $('form').on('submit', function(event){
     event.preventDefault();
-    const data = $('form').serialize();
-    $.post('/tweets/', data, function() {
-      loadTweets();
-    });
+    const data = $(this).serialize();
+    const text = decodeURIComponent(data.substring(5));//decoded the urlencoded string
+    if (text.length === 0) {
+      alert('Your tweet must contain text!');
+    } else if (140 < text.length) {
+      alert('Your tweet cannot exceed 140 characters!');
+    } else {
+      $.post('/tweets/', data, function() {
+        loadTweets();
+      });
+    }
+    
   })
   // Test / driver code (temporary)
 
