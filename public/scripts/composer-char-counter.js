@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $("#tweet-text").on("input", function() {
-    currentLength = $(this).val().length;
-    charsLeft = 140 - currentLength;
+    const currentLength = $(this).val().length;
+    const charsLeft = 140 - currentLength;
     $(this).siblings(".send-tweet").children(".counter").html(charsLeft);
     if (charsLeft < 0) {
       $(this).siblings(".send-tweet").children(".counter").css("color", "red");
@@ -10,3 +10,4 @@ $(document).ready(function() {
     }
   });
 });
+
