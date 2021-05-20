@@ -8,6 +8,7 @@ $(document).ready(function() {
   //sets timeago up to display the date posted below tweets
   const x = document.getElementsByClassName('need_to_be_rendered');
   $('#error-message').hide();
+  $('#new-tweet').hide();
   loadTweets(renderAllTweets);
 
   $('form').on('submit', function(event){
@@ -34,11 +35,16 @@ $(document).ready(function() {
       $.post('/tweets/', data, function() {
         loadTweets(renderLatestTweets);
         $("#tweet-text").val("");
+        $(".counter").html("140");
       });
       $('textarea').focus();
     }
-    
+
   })
+  $('.write-new-tweet').on('click', function(event){
+    $('#new-tweet').slideDown("slow");
+    $('textarea').focus();
+  });
 });
 
 const createTweetElement = (tweet) => {
@@ -85,6 +91,20 @@ const createError = errMessage => {
   const $err = (`<div class="alert-box error"><i class="fas fa-times-circle"></i><span>error: </span>${errMessage}</div>`);
   return $err;
 };
+
+// const renderNewTweet = () => {
+//   const $tweetArea = `
+//   <form method="POST", action="/tweets/">
+//   <label for="tweet-text">What are you humming about?</label>
+//   <textarea name="text" id="tweet-text"></textarea>
+//   <div class="send-tweet">
+//     <button type="submit">Tweet</button>
+//     <output name="counter" class="counter" for="tweet-text">140</output>
+//   </div>
+//   </form>
+//   `;
+//   return $tweetArea;
+// };
 
 const renderAllTweets = (tweetArr) => {
   for (const item of tweetArr) {

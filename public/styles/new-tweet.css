@@ -1,4 +1,4 @@
-.new-tweet {
+#new-tweet {
   width: 90%;
   margin: 0.5em;
   display: flex;
@@ -7,15 +7,26 @@
   font-weight: 600;
 }
 
-.send-tweet button {
+.send-tweet button{
   background-color: #4056A1;
   color:#FFFFFF;
   border: none;
+  position: relative;
+  transition: 0.5s;
+}
+
+.send-tweet button:after {
+  position: absolute;
+  opacity: 100;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
 }
 
 .send-tweet button:hover {
   box-shadow: 5px 5px #7a776d;
-  color:#ecd79a
+  color:#ecd79a;
+  padding-right: 25px;
 }
 
 .send-tweet {
@@ -35,3 +46,4 @@ textarea {
   resize:none;
   font-size: smaller;
 }
+

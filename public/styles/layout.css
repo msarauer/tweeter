@@ -36,3 +36,15 @@ body {
   flex-direction: column;
   background-color: #f4f1ec;
 }
+
+@media only screen and (min-width:1024px) {
+
+  body {
+    display: flex;
+  }
+
+  body .container {
+    margin-right: 2em;
+    margin-top: 2em;
+  }
+}

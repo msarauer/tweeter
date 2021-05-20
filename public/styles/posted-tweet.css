@@ -7,7 +7,6 @@
 
 #tweet-container {
   width: 90%;
-  margin: 10px;
   display:flex;
   flex-direction: column;
 }
@@ -74,3 +73,9 @@ footer {
 .tweet-btn:hover {
   color:#b19035
 }
+
+/* @media only screen and (min-width:1024px) {
+  #tweet-container {
+    margin-top: 4em;
+  }
+} */
