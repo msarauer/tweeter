@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  //changes the counter as you type in the textarea
   $("#tweet-text").on("input", function() {
     const currentLength = $(this).val().length;
     const charsLeft = 140 - currentLength;

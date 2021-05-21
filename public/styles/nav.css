@@ -1,68 +1,79 @@
 .nav-bar {
-  background-color: #4056A1;
+  background-color: #4056a1;
   height: 120px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
-  z-index: 1000;
+  z-index: 1000; /* Put the navbar on top of everything */
 }
 
 .site-logo {
-  color:#FFFFFF;
+  color: #ffffff;
   font-family: "Bungee";
   font-size: larger;
   margin: 1.5em;
 }
 
 .new-tweet-btn {
-  margin:1.5em;
-  color:#FFFFFF;
+  margin: 1.5em;
+  color: #ffffff;
 }
 
-.write-new-tweet {
-  display: flex;
-  flex-direction: column;
-  background-color: transparent;
-  border:none;
-}
-
-.write-new-tweet:hover {
-  display: flex;
-  flex-direction: column;
-  border:none;
-  align-self: flex-end;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  margin: 0 auto 0 auto;
-  transform-origin: bottom;
-  
-}
 i {
   display: flex;
   align-self: center;
 }
 
 .arrows {
-  color:red;
+  color: red;
+}
+
+.write-new-tweet {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  border: none;
+}
+
+.write-new-tweet:hover {
+  animation-duration: 2s; /* Animate over 2s */
+  animation-iteration-count: infinite; /* Animate continuously */
+  margin: 0 auto; /* position centrally in container */
+  transform-origin: bottom;
 }
 
 .bounce-7 {
   animation-name: bounce-7;
-  animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
-}
-@keyframes bounce-7 {
-  0%   { transform: scale(1,1)      translateY(0); }
-  10%  { transform: scale(1.1,.9)   translateY(0); }
-  30%  { transform: scale(.9,1.1)   translateY(-7px); }
-  50%  { transform: scale(1.05,.95) translateY(0); }
-  57%  { transform: scale(1,1)      translateY(-5px); }
-  64%  { transform: scale(1,1)      translateY(0); }
-  100% { transform: scale(1,1)      translateY(0); }
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1); /* timing curve for the animation (taken from example on web) */
 }
 
-@media only screen and (max-width:1024px) {
+@keyframes bounce-7 { /* transformation for the animation (taken from example on web) */
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-7px);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-5px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+
+@media only screen and (max-width: 1024px) { /* nav bar matches header on smaller screens */
   .nav-bar {
     background-color: #e0b455;
     background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");

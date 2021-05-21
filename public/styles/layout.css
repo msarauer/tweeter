@@ -37,12 +37,29 @@ body {
   background-color: #f4f1ec;
 }
 
-@media only screen and (min-width:1024px) {
+#toTop {
+  padding: 50px 20px;
+  background: transparent;
+  font-size: 37pt;
+  opacity: 40%;
+  color: red;
+  position: fixed;
+  bottom: 0;
+  right: 5px;
+  display: none;
+  transition: all 0.7s;
+}
 
+/* change opacity and size of the scroll to top button */
+#toTop:hover {
+  opacity: 100%;
+  font-size: 40pt;
+}
+
+@media only screen and (min-width:1024px) {
   body {
     display: flex;
   }
-
   body .container {
     margin-right: 2em;
     margin-top: 2em;

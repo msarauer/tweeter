@@ -15,18 +15,10 @@
   transition: 0.5s;
 }
 
-.send-tweet button:after {
-  position: absolute;
-  opacity: 100;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
 .send-tweet button:hover {
   box-shadow: 5px 5px #7a776d;
   color:#ecd79a;
-  padding-right: 25px;
+  padding-right: 10px;
 }
 
 .send-tweet {

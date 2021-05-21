@@ -1,10 +1,9 @@
 .alert-box {
   color:#555;
   border-radius:10px;
-  font-family:Tahoma,Geneva,Arial,sans-serif;font-size:11px;
   padding:10px 10px 10px 36px;
   margin:10px;
-  font-size: large;
+  font-size: x-large;
 }
 
 .alert-box span {
@@ -17,7 +16,7 @@
   border:1px solid #f5aca6;
 }
 
-.fa-times-circle i {
+.fa-times-circle {
   margin-right: 10px;
   color:red;
 }
