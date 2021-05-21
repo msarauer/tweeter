@@ -15,3 +15,23 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- Body-parser
+- Chance
+- md5
+- Morgan
+
+## Features
+
+- Error messages
+- Scroll to top button
+- Animated buttons
+- Responsive design
+- And more!!
+
+## Screenshots
+
+!["Screenshot of posted tweet"](https://github.com/msarauer/tweeter/blob/master/docs/Posted%20tweet.png?raw=true)
+
+!["Screenshot of error message"](https://github.com/msarauer/tweeter/blob/master/docs/Error%20message.png?raw=true)
+
+!["Screenshot showing responsive design"](https://github.com/msarauer/tweeter/blob/master/docs/Small%20screen%20view.png?raw=true)
